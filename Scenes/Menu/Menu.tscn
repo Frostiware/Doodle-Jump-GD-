@@ -1,0 +1,182 @@
+[gd_scene load_steps=16 format=3 uid="uid://c5d4tfv05b44e"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Menu.cs" id="1_ku6gi"]
+[ext_resource type="Texture2D" uid="uid://cwfbqkyhhtsiv" path="res://Assets/Images/Doodle/Blue_Lik/blue-lik-right.png" id="2_11qhv"]
+[ext_resource type="Texture2D" uid="uid://w5f00qgi4ew3" path="res://Assets/Images/UI/doodlestein-bck@2x.png" id="2_otgxk"]
+[ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="3_dulnd"]
+[ext_resource type="Texture2D" uid="uid://bwr0r3ftajlbm" path="res://Assets/Images/UI/options.png" id="3_wrx37"]
+[ext_resource type="Texture2D" uid="uid://dox8xvxaa1iu1" path="res://Assets/Images/UI/scores.png" id="4_fwppe"]
+[ext_resource type="Texture2D" uid="uid://b5y2jev2hpy2r" path="res://Assets/Images/Components/hole.png" id="4_mqasf"]
+[ext_resource type="Texture2D" uid="uid://dwo0usg4gt783" path="res://Assets/Images/UI/bottom-bug-tiles.png" id="4_p2edi"]
+[ext_resource type="Texture2D" uid="uid://crmjp02pkjee5" path="res://Assets/Images/UI/doodle-jump.png" id="6_0konm"]
+[ext_resource type="Texture2D" uid="uid://cs7rubxakjvrx" path="res://Assets/Images/Tiles/game-tiles-bunny.png" id="6_1jfqd"]
+[ext_resource type="Texture2D" uid="uid://dp6l5n33ipf1e" path="res://Assets/Images/UI/options-on.png" id="8_0xx6d"]
+[ext_resource type="Texture2D" uid="uid://c8h3yitdwd4b2" path="res://Assets/Images/UI/scores-on.png" id="9_038oh"]
+[ext_resource type="Texture2D" uid="uid://c3e610fe68vyb" path="res://Assets/Images/Tiles/game-tiles.png" id="12_4vabi"]
+[ext_resource type="Texture2D" uid="uid://drycywc465tpq" path="res://Assets/Images/UI/play.png" id="12_umx3w"]
+[ext_resource type="Texture2D" uid="uid://ce50popqfy58b" path="res://Assets/Images/UI/play-on.png" id="13_pgu84"]
+
+[node name="Menu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ku6gi")
+
+[node name="BackgroundBlack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_otgxk")
+expand_mode = 1
+
+[node name="BackgroundMain" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dulnd")
+expand_mode = 1
+
+[node name="Hole" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -35.0
+offset_right = -24.0
+offset_bottom = 37.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_mqasf")
+
+[node name="BackgroundTear" type="Sprite2D" parent="."]
+position = Vector2(161, 466)
+texture = ExtResource("4_p2edi")
+region_enabled = true
+region_rect = Rect2(0, 0, 323.5, 64)
+
+[node name="DoodleJumpText" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 65.0
+offset_right = 180.0
+offset_bottom = 108.0
+rotation = -0.181514
+texture = ExtResource("6_0konm")
+expand_mode = 1
+
+[node name="Bugs" type="Node" parent="."]
+
+[node name="Bug" type="Sprite2D" parent="Bugs"]
+texture_filter = 1
+position = Vector2(78.75, 33.875)
+scale = Vector2(1.29545, 1.15476)
+texture = ExtResource("4_p2edi")
+region_enabled = true
+region_rect = Rect2(323.454, 0.644615, 22.5394, 21.1734)
+
+[node name="Bug5" type="Sprite2D" parent="Bugs"]
+texture_filter = 1
+position = Vector2(207, 167)
+scale = Vector2(1.29545, 1.15476)
+texture = ExtResource("4_p2edi")
+region_enabled = true
+region_rect = Rect2(352.435, 23.4627, 25.2715, 25.2715)
+
+[node name="Bug2" type="Sprite2D" parent="Bugs"]
+texture_filter = 1
+position = Vector2(44, 197)
+scale = Vector2(1.29545, 1.15476)
+texture = ExtResource("4_p2edi")
+region_enabled = true
+region_rect = Rect2(323.065, 19.3647, 19.8074, 19.8074)
+
+[node name="Bug3" type="Sprite2D" parent="Bugs"]
+texture_filter = 1
+position = Vector2(141, 280)
+scale = Vector2(1.29545, 1.15476)
+texture = ExtResource("4_p2edi")
+region_enabled = true
+region_rect = Rect2(321.699, 43.9531, 30.7356, 19.8074)
+
+[node name="Bug4" type="Sprite2D" parent="Bugs"]
+texture_filter = 1
+position = Vector2(164, 342)
+scale = Vector2(1.29545, 1.15476)
+texture = ExtResource("4_p2edi")
+region_enabled = true
+region_rect = Rect2(348.337, 3.65535, 36.8827, 16.3923)
+
+[node name="Lik" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(59, 370)
+texture = ExtResource("2_11qhv")
+
+[node name="Platform" type="Sprite2D" parent="."]
+position = Vector2(61, 406)
+texture = ExtResource("6_1jfqd")
+region_enabled = true
+region_rect = Rect2(0.913107, 0.269917, 57.7864, 14.4832)
+
+[node name="UFO" type="Sprite2D" parent="."]
+position = Vector2(248, 81)
+texture = ExtResource("12_4vabi")
+region_enabled = true
+region_rect = Rect2(427.269, 82.5387, 82.6447, 123.573)
+
+[node name="OptionsBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -124.0
+offset_right = -11.0
+offset_bottom = -83.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_wrx37")
+texture_hover = ExtResource("8_0xx6d")
+
+[node name="ScoresBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.969
+anchor_top = 0.676
+anchor_right = 0.969
+anchor_bottom = 0.676
+offset_left = -113.08
+offset_top = -10.112
+offset_right = -1.08002
+offset_bottom = 29.888
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_fwppe")
+texture_hover = ExtResource("9_038oh")
+
+[node name="PlayBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 103.0
+offset_right = 172.0
+offset_bottom = 143.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_umx3w")
+texture_hover = ExtResource("13_pgu84")

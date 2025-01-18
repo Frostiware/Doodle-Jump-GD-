@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwgi4wb8j0rch"
-path="res://.godot/imported/red-lik-left.png-e22369dc57934ed054138c44bec28741.ctex"
+uid="uid://w5f00qgi4ew3"
+path="res://.godot/imported/doodlestein-bck@2x.png-99337e2de66575c328a8e61c5f10a2e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Doodle/Lik/red-lik-left.png"
-dest_files=["res://.godot/imported/red-lik-left.png-e22369dc57934ed054138c44bec28741.ctex"]
+source_file="res://Assets/Images/UI/doodlestein-bck@2x.png"
+dest_files=["res://.godot/imported/doodlestein-bck@2x.png-99337e2de66575c328a8e61c5f10a2e9.ctex"]
 
 [params]
 

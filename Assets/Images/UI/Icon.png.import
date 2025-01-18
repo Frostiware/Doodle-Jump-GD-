@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wgsokyhs6xeb"
-path="res://.godot/imported/red-lik-left-odskok.png-26c7222bebe6265ba41f31596a07eece.ctex"
+uid="uid://c45fx7uofppu0"
+path="res://.godot/imported/Icon.png-28f0cee66401ef0461411203b486d1a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Doodle/Lik/red-lik-left-odskok.png"
-dest_files=["res://.godot/imported/red-lik-left-odskok.png-26c7222bebe6265ba41f31596a07eece.ctex"]
+source_file="res://Assets/Images/UI/Icon.png"
+dest_files=["res://.godot/imported/Icon.png-28f0cee66401ef0461411203b486d1a2.ctex"]
 
 [params]
 
