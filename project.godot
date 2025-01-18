@@ -25,3 +25,8 @@ window/handheld/orientation=1
 [dotnet]
 
 project/assembly_name="New Game Project"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
