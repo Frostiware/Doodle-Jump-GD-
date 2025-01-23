@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dat85vum8hi5x"]
+
+[ext_resource type="Texture2D" uid="uid://x2fu0ly4v7o" path="res://Assets/Images/UI/menu.png" id="1_xrji7"]
+[ext_resource type="Texture2D" uid="uid://bw0tqgevy3ke3" path="res://Assets/Images/UI/menu-on.png" id="2_7t7pj"]
+[ext_resource type="Script" path="res://Scenes/Components/MenuBtn.cs" id="3_nykml"]
+
+[node name="TextureButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_xrji7")
+texture_pressed = ExtResource("2_7t7pj")
+texture_hover = ExtResource("2_7t7pj")
+script = ExtResource("3_nykml")

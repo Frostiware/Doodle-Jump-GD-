@@ -1,15 +1,12 @@
 namespace DoodleJump.Scripts.Core
 {
-    using Godot;
-
-    // Principal class for the game engine
-    // has partial classes 
-    public static partial class DoodleJump
+    public static partial class Doodle
     {
+        public static Settings Settings;
 
-        static DoodleJump()
+        static Doodle()
         {
-
+            Settings = new Settings(mode: GameMode.CLASSIC);
         }
 
     }

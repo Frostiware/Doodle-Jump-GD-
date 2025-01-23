@@ -1,6 +1,6 @@
 using Godot;
 using System;
-namespace DoodleJump.Scripts.Core;
+using DoodleJump.Scripts.Core;
 
 
 public partial class Menu : Control
@@ -27,7 +27,7 @@ public partial class Menu : Control
 		_scoreBtn.Pressed += OnScorePressed;
 		_optionBtn.Pressed += OnOptionPressed;
 
-		DoodleJump.SetInterval(this, MakeLikJump, 1.5f);
+		Doodle.SetInterval(this, MakeLikJump, 1.5f);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,7 +42,7 @@ public partial class Menu : Control
 	private void MakeLikJump(double interval)
 	{
 		var tween = GetTree().CreateTween();
-		var jumpTo = _likPos - (DoodleJump.GetWindowSize(this) * new Vector2(0, 0.55f));
+		var jumpTo = _likPos - (Doodle.GetWindowSize(this) * new Vector2(0, 0.55f));
 
 		tween.TweenProperty(_lik, "position", jumpTo, interval * 0.5f)
 		.SetTrans(Tween.TransitionType.Sine)
@@ -54,19 +54,19 @@ public partial class Menu : Control
 
 	private void OnPlayPressed()
 	{
-		GD.Print("Navigate to Game Scene");
+		GetTree().ChangeSceneToFile("res://Scenes/Menu/Play.tscn");
 	}
 
 
 	private void OnScorePressed()
 	{
-		GD.Print("Navigate to Score Scene");
+		GetTree().ChangeSceneToFile("res://Scenes/Menu/Score.tscn");
 	}
 
 
 	private void OnOptionPressed()
 	{
-		GD.Print("Navigate to Option Scene");
+		GetTree().ChangeSceneToFile("res://Scenes/Menu/Option.tscn");
 	}
 
 }

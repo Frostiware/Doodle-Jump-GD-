@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://8eylmljidhab"]
+[gd_scene load_steps=5 format=3 uid="uid://8eylmljidhab"]
 
+[ext_resource type="Script" path="res://Scenes/Menu/Option.cs" id="1_75v03"]
 [ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="1_f0o38"]
-[ext_resource type="Texture2D" uid="uid://dwo0usg4gt783" path="res://Assets/Images/UI/bottom-bug-tiles.png" id="2_3l3r6"]
-[ext_resource type="Texture2D" uid="uid://crmjp02pkjee5" path="res://Assets/Images/UI/doodle-jump.png" id="2_3xcun"]
+[ext_resource type="Texture2D" uid="uid://cjyiqxqum5fjl" path="res://Assets/Images/UI/options-bck.png" id="2_k0qx5"]
+[ext_resource type="PackedScene" path="res://Scenes/Components/MenuBtn.tscn" id="4_flomg"]
 
 [node name="Option" type="Control"]
 texture_filter = 1
@@ -12,8 +13,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_75v03")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Bg" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,37 +24,25 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_f0o38")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="OptionBg" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 18.0
-offset_top = 52.0
-offset_right = -100.0
-offset_bottom = -402.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.0872665
-texture = ExtResource("2_3xcun")
+texture = ExtResource("2_k0qx5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(55.75, 29.25)
-scale = Vector2(1.32609, 1.11905)
-texture = ExtResource("2_3l3r6")
-region_enabled = true
-region_rect = Rect2(321.71, 0, 23.29, 21.5146)
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(244, 51)
-scale = Vector2(1.32609, 1.11905)
-texture = ExtResource("2_3l3r6")
-region_enabled = true
-region_rect = Rect2(322.66, 21.6704, 21.6209, 17.1984)
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(125, 111)
-scale = Vector2(1.32609, 1.11905)
-texture = ExtResource("2_3l3r6")
-region_enabled = true
-region_rect = Rect2(354.385, 21.2754, 21.5865, 25.0762)
+[node name="MenuBtn" parent="." instance=ExtResource("4_flomg")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -46.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0

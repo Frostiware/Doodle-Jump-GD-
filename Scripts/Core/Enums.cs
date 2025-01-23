@@ -1,19 +1,23 @@
 namespace DoodleJump.Scripts.Core
 {
 
-    public enum ThemeType: uint
+    public enum GameMode
     {
-        DEFAULT,
-        BUNNY,
+        CLASSIC,
         HALLOWEEN,
-        ICE,
-        JUNGLE,
-        SNOW,
-        SOCCER,
+        ICE_BLIZZARD,
+        RAINFOREST,
         SPACE,
-        UNDERWATER
-    };
+        SOCCER_WORLD_CUP,
+        UNDERWATER,
+    }
 
+
+    public enum CalibrateType
+    {
+        MANUAL,
+        AUTO
+    };
 
     public enum DoodleType: uint
     {
