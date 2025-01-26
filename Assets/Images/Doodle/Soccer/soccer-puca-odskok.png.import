@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crmjp02pkjee5"
-path="res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"
+uid="uid://mnnxuprch0gi"
+path="res://.godot/imported/soccer-puca-odskok.png-15ed84b6ccb571e2321b05c4318eb6b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/doodle-jump.png"
-dest_files=["res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"]
+source_file="res://Assets/Images/Doodle/Soccer/soccer-puca-odskok.png"
+dest_files=["res://.godot/imported/soccer-puca-odskok.png-15ed84b6ccb571e2321b05c4318eb6b3.ctex"]
 
 [params]
 

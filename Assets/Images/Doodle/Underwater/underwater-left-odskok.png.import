@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crmjp02pkjee5"
-path="res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"
+uid="uid://htxdyllf7pvn"
+path="res://.godot/imported/underwater-left-odskok.png-967d64aa880b29a43a80acf0891a47b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/doodle-jump.png"
-dest_files=["res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"]
+source_file="res://Assets/Images/Doodle/Underwater/underwater-left-odskok.png"
+dest_files=["res://.godot/imported/underwater-left-odskok.png-967d64aa880b29a43a80acf0891a47b3.ctex"]
 
 [params]
 

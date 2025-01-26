@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crmjp02pkjee5"
-path="res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"
+uid="uid://cureoi48h7u17"
+path="res://.godot/imported/jungle-scroller.png-13720b90d371888573543303a08b8500.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/doodle-jump.png"
-dest_files=["res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"]
+source_file="res://Assets/Images/Doodle/Jungle/jungle-scroller.png"
+dest_files=["res://.godot/imported/jungle-scroller.png-13720b90d371888573543303a08b8500.ctex"]
 
 [params]
 

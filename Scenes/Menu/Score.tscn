@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=3 uid="uid://l86aoxg1rh37"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Score.cs" id="1_us463"]
+[ext_resource type="Texture2D" uid="uid://ca3d4g8e8ngjg" path="res://Assets/Images/UI/high-scores-left.png" id="2_0xgwk"]
+[ext_resource type="Texture2D" uid="uid://cksejiifni8b8" path="res://Assets/Images/UI/high-scores-top.png" id="2_a11fs"]
+[ext_resource type="Texture2D" uid="uid://c81nyrfcwybib" path="res://Assets/Images/UI/high-scores-bottom.png" id="3_yk3hp"]
+[ext_resource type="Texture2D" uid="uid://s3rheukwn557" path="res://Assets/Images/UI/hs-local.png" id="4_b5fbj"]
+[ext_resource type="Texture2D" uid="uid://birocpred0w3i" path="res://Assets/Images/UI/hs-global.png" id="5_ini6n"]
+[ext_resource type="Texture2D" uid="uid://bh71ykelm1u2s" path="res://Assets/Images/UI/hs-global-on.png" id="6_bfu0e"]
+[ext_resource type="PackedScene" path="res://Scenes/Components/MenuBtn.tscn" id="8_qj3uv"]
+
+[node name="Score" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_us463")
+
+[node name="TopBg" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 320.0
+offset_bottom = 119.0
+texture = ExtResource("2_a11fs")
+
+[node name="LeftBg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -138.0
+offset_right = 58.0
+offset_bottom = 94.0
+grow_vertical = 2
+texture = ExtResource("2_0xgwk")
+
+[node name="BottomBg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -162.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_yk3hp")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 358.0
+offset_right = 252.0
+offset_bottom = 402.0
+texture_normal = ExtResource("4_b5fbj")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 357.0
+offset_right = 322.0
+offset_bottom = 401.0
+texture_normal = ExtResource("5_ini6n")
+texture_pressed = ExtResource("6_bfu0e")
+
+[node name="ControlTab" type="Control" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -154.0
+offset_bottom = 102.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="ControlTab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="score" type="MarginContainer" parent="ControlTab/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="ControlTab/TabContainer/score"]
+layout_mode = 2
+text = "This is the score page"
+
+[node name="stats" type="MarginContainer" parent="ControlTab/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="ControlTab/TabContainer/stats"]
+layout_mode = 2
+text = "Stats Page"
+
+[node name="achievements" type="MarginContainer" parent="ControlTab/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="ControlTab/TabContainer/achievements"]
+layout_mode = 2
+text = "Achievement Page"
+
+[node name="MenuBtn" parent="." instance=ExtResource("8_qj3uv")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -44.0
+offset_right = -6.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0

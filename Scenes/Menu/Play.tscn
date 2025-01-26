@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://ded23v5ydn32d"]
+
+[ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="1_wyrjh"]
+[ext_resource type="PackedScene" uid="uid://crpu02msthi2f" path="res://Scenes/Character/Platforms/GreenPlatform.tscn" id="2_pwscj"]
+[ext_resource type="PackedScene" uid="uid://cjxwg70kbri1d" path="res://Scenes/Character/Lik.tscn" id="3_rpiwl"]
+
+[node name="Play" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wyrjh")
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(60, 471)
+
+[node name="Platform2" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(256, 471)
+
+[node name="Platform3" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(62, 398)
+
+[node name="Platform4" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(177, 419)
+
+[node name="Platform5" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(202, 327)
+
+[node name="Platform7" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(256, 274)
+
+[node name="Platform9" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(73, 138)
+
+[node name="Platform10" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(231, 141)
+
+[node name="Platform11" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(67, 223)
+
+[node name="Platform12" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(171, 70)
+
+[node name="Platform13" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(70, 13)
+
+[node name="Platform14" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(280, 54)
+
+[node name="Platform15" parent="Platforms" instance=ExtResource("2_pwscj")]
+position = Vector2(269, 218)
+
+[node name="Lik" parent="." instance=ExtResource("3_rpiwl")]
+z_index = 1
+position = Vector2(56, 420)

@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjxwg70kbri1d"]
+
+[ext_resource type="Texture2D" uid="uid://dm7sb8v6u274h" path="res://Assets/Images/Doodle/Lik/lik-right.png" id="1_f038a"]
+[ext_resource type="Script" path="res://Scenes/Character/Lik.cs" id="1_xt8s4"]
+[ext_resource type="Texture2D" uid="uid://dre4523s60xqo" path="res://Assets/Images/Doodle/Lik/lik-puca.png" id="2_f4ued"]
+[ext_resource type="Texture2D" uid="uid://dvlgyjdcixsux" path="res://Assets/Images/Doodle/Lik/lik-right-odskok.png" id="2_pand7"]
+[ext_resource type="Texture2D" uid="uid://dm1tc5adw13s7" path="res://Assets/Images/Doodle/Lik/lik-puca-odskok.png" id="3_h87dq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvulk"]
+atlas = ExtResource("2_f4ued")
+region = Rect2(0, 0, 62, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haiv0"]
+atlas = ExtResource("3_h87dq")
+region = Rect2(0, 0, 62, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1260q"]
+atlas = ExtResource("1_f038a")
+region = Rect2(0, 0, 62, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc76v"]
+atlas = ExtResource("2_pand7")
+region = Rect2(0, 0, 62, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swu2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvulk")
+}],
+"loop": true,
+"name": &"lik-puca",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haiv0")
+}],
+"loop": true,
+"name": &"lik-puca-odskok",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1260q")
+}],
+"loop": true,
+"name": &"lik-right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc76v")
+}],
+"loop": true,
+"name": &"lik-right-odskok",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvuix"]
+size = Vector2(27, 26)
+
+[node name="Lik" type="Area2D"]
+script = ExtResource("1_xt8s4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_swu2d")
+animation = &"lik-right"
+autoplay = "lik-right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 17)
+shape = SubResource("RectangleShape2D_uvuix")

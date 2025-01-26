@@ -1,24 +1,79 @@
-[gd_scene format=3 uid="uid://c2qhc6g040p0h"]
+[gd_scene load_steps=7 format=3 uid="uid://c2qhc6g040p0h"]
+
+[ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="1_kqohb"]
+[ext_resource type="Script" path="res://Scenes/Menu/Splash.cs" id="1_q7knb"]
+[ext_resource type="Texture2D" uid="uid://c45fx7uofppu0" path="res://Assets/Images/UI/Icon.png" id="2_746f2"]
+[ext_resource type="Texture2D" uid="uid://crmjp02pkjee5" path="res://Assets/Images/UI/doodle-jump.png" id="3_tknry"]
+[ext_resource type="Texture2D" uid="uid://yggdsaaqb17r" path="res://Assets/Images/UI/loading.png" id="4_mrpe0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k7mco"]
+blend_mode = 2
 
 [node name="Splash" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q7knb")
 
-[node name="Label" type="Label" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kqohb")
+
+[node name="Icon" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -53.5
-offset_top = -11.5
-offset_right = 53.5
-offset_bottom = 11.5
+offset_left = -33.5
+offset_top = -35.0
+offset_right = 33.5
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Splash Screen"
+pivot_offset = Vector2(33.5, 35)
+texture = ExtResource("2_746f2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="DoodleJumpText" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = 62.0
+offset_right = 33.5
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_tknry")
+stretch_mode = 4
+
+[node name="LoadingText" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_k7mco")
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = -28.0
+offset_right = 39.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_mrpe0")
+stretch_mode = 4

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crmjp02pkjee5"
-path="res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"
+uid="uid://ep847k126u6x"
+path="res://.godot/imported/doodlestein-left@2x.png-b87841d526652f6a8d489e885487030d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/doodle-jump.png"
-dest_files=["res://.godot/imported/doodle-jump.png-b1ec4ef0ce26aff5d9b9b1b9bec1861a.ctex"]
+source_file="res://Assets/Images/Doodle/Einsten/doodlestein-left@2x.png"
+dest_files=["res://.godot/imported/doodlestein-left@2x.png-b87841d526652f6a8d489e885487030d.ctex"]
 
 [params]
 

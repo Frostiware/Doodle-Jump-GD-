@@ -1,0 +1,142 @@
+[gd_scene load_steps=13 format=3 uid="uid://8eylmljidhab"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Option.cs" id="1_75v03"]
+[ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="1_f0o38"]
+[ext_resource type="Texture2D" uid="uid://cjyiqxqum5fjl" path="res://Assets/Images/UI/options-bck.png" id="2_k0qx5"]
+[ext_resource type="PackedScene" uid="uid://dat85vum8hi5x" path="res://Scenes/Components/MenuBtn.tscn" id="4_flomg"]
+[ext_resource type="PackedScene" uid="uid://dqlxy5p7pokgg" path="res://Scenes/Components/switch.tscn" id="5_2hqw7"]
+[ext_resource type="Texture2D" uid="uid://craon2d6ibasg" path="res://Assets/Images/UI/manual-button-on.png" id="5_eqhm6"]
+[ext_resource type="Texture2D" uid="uid://dhru72wrd6hq1" path="res://Assets/Images/UI/auto-button-on.png" id="6_2klhh"]
+[ext_resource type="Texture2D" uid="uid://csyckbq4mt8dh" path="res://Assets/Images/UI/auto-button.png" id="6_lvr7m"]
+[ext_resource type="Texture2D" uid="uid://u28l8wav8u7s" path="res://Assets/Images/UI/classic-button-on.png" id="8_7in7f"]
+[ext_resource type="Texture2D" uid="uid://dpyt2f8saixum" path="res://Assets/Images/UI/classic-button.png" id="9_qhxeg"]
+[ext_resource type="Texture2D" uid="uid://dxtbykc63706d" path="res://Assets/Images/UI/custom-button-on.png" id="10_xuu4l"]
+[ext_resource type="Texture2D" uid="uid://cex36js5mdr8t" path="res://Assets/Images/UI/custom-button.png" id="11_18wbs"]
+
+[node name="Option" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_75v03")
+
+[node name="Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f0o38")
+
+[node name="OptionBg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k0qx5")
+
+[node name="MenuBtn" parent="." instance=ExtResource("4_flomg")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -46.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Calibrate" type="Node" parent="."]
+
+[node name="Manual" type="TextureButton" parent="Calibrate"]
+offset_left = 122.0
+offset_top = 481.0
+offset_right = 177.0
+offset_bottom = 521.0
+texture_normal = ExtResource("5_eqhm6")
+
+[node name="Auto" type="TextureButton" parent="Calibrate"]
+offset_left = 44.0
+offset_top = 481.0
+offset_right = 99.0
+offset_bottom = 521.0
+texture_normal = ExtResource("6_2klhh")
+texture_pressed = ExtResource("6_lvr7m")
+texture_disabled = ExtResource("6_2klhh")
+
+[node name="Mode" type="Node" parent="."]
+
+[node name="Classic" type="TextureButton" parent="Mode"]
+anchors_preset = -1
+anchor_left = 0.259
+anchor_top = 0.293
+anchor_right = 0.259
+anchor_bottom = 0.293
+offset_left = -36.88
+offset_top = -20.016
+offset_right = 37.12
+offset_bottom = 19.984
+texture_normal = ExtResource("8_7in7f")
+texture_pressed = ExtResource("9_qhxeg")
+texture_disabled = ExtResource("8_7in7f")
+
+[node name="Custom" type="TextureButton" parent="Mode"]
+anchors_preset = -1
+anchor_left = 0.619
+anchor_top = 0.293
+anchor_right = 0.619
+anchor_bottom = 0.293
+offset_left = -37.08
+offset_top = -20.016
+offset_right = 36.92
+offset_bottom = 19.984
+texture_normal = ExtResource("10_xuu4l")
+texture_pressed = ExtResource("11_18wbs")
+texture_disabled = ExtResource("10_xuu4l")
+
+[node name="Switches" type="Node" parent="."]
+
+[node name="LeaderBoard" parent="Switches" instance=ExtResource("5_2hqw7")]
+offset_left = 52.0
+offset_top = 229.0
+offset_right = 232.0
+offset_bottom = 277.0
+
+[node name="Shooting" parent="Switches" instance=ExtResource("5_2hqw7")]
+offset_left = 101.0
+offset_top = 284.0
+offset_right = 281.0
+offset_bottom = 332.0
+
+[node name="LocalScore" parent="Switches" instance=ExtResource("5_2hqw7")]
+offset_left = 67.0
+offset_top = 335.0
+offset_right = 247.0
+offset_bottom = 383.0
+
+[node name="Fb" parent="Switches" instance=ExtResource("5_2hqw7")]
+offset_left = 112.0
+offset_top = 383.0
+offset_right = 292.0
+offset_bottom = 431.0
+
+[node name="Sound" parent="Switches" instance=ExtResource("5_2hqw7")]
+offset_left = 60.0
+offset_top = 428.0
+offset_right = 240.0
+offset_bottom = 476.0
+
+[node name="ScoreMarker" parent="Switches" instance=ExtResource("5_2hqw7")]
+offset_left = 97.0
+offset_top = 177.0
+offset_right = 277.0
+offset_bottom = 225.0

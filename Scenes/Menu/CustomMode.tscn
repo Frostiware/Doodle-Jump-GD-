@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://p6y4n5s712ss"]
+
+[ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="1_8kqig"]
+[ext_resource type="PackedScene" uid="uid://dat85vum8hi5x" path="res://Scenes/Components/MenuBtn.tscn" id="2_wcx2r"]
+
+[node name="CustomMode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8kqig")
+
+[node name="TextureButton" parent="." instance=ExtResource("2_wcx2r")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -41.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
