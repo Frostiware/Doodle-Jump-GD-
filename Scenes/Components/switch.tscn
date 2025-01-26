@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqlxy5p7pokgg"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Switch.cs" id="1_m1ik8"]
+[ext_resource type="Texture2D" uid="uid://erjux7xptj4c" path="res://Assets/Images/UI/on-button-on.png" id="1_yr3wm"]
+[ext_resource type="Texture2D" uid="uid://bx4wob7236ewh" path="res://Assets/Images/UI/off-button.png" id="2_r55ya"]
+[ext_resource type="Texture2D" uid="uid://cprtoef5vfdfc" path="res://Assets/Images/UI/on-button.png" id="3_3b8m1"]
+[ext_resource type="Texture2D" uid="uid://bnng1t3vu8wuy" path="res://Assets/Images/UI/off-button-on.png" id="3_s5gnc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 147.0
+offset_bottom = 47.0
+size_flags_horizontal = 4
+script = ExtResource("1_m1ik8")
+
+[node name="On" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("1_yr3wm")
+texture_pressed = ExtResource("3_3b8m1")
+texture_disabled = ExtResource("3_3b8m1")
+
+[node name="Off" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -20.0
+offset_right = 48.0
+grow_vertical = 2
+texture_normal = ExtResource("3_s5gnc")
+texture_pressed = ExtResource("2_r55ya")
+texture_disabled = ExtResource("2_r55ya")
+ignore_texture_size = true
