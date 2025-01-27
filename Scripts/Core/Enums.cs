@@ -1,6 +1,14 @@
 namespace DoodleJump.Scripts.Core
 {
 
+    public enum PlayStatus
+    {
+        OVER,
+        PAUSED,
+        PLAYING
+    }
+
+
     public enum GameMode
     {
         CLASSIC,

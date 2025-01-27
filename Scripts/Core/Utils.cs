@@ -7,6 +7,12 @@ namespace DoodleJump.Scripts.Core
 	public static partial class Doodle
 	{
 
+		public static bool PlayStatusEqual(PlayStatus other)
+		{
+			return Status == other;
+		}
+
+
 		/*
 		A utility function that periodically executes a routine
 

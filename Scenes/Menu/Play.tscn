@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ded23v5ydn32d"]
+[gd_scene load_steps=6 format=3 uid="uid://ded23v5ydn32d"]
 
+[ext_resource type="Script" path="res://Scenes/Menu/Play.cs" id="1_1ueec"]
 [ext_resource type="Texture2D" uid="uid://cpcbsdw7a7be6" path="res://Assets/Images/UI/bck.png" id="1_wyrjh"]
 [ext_resource type="PackedScene" uid="uid://crpu02msthi2f" path="res://Scenes/Character/Platforms/GreenPlatform.tscn" id="2_pwscj"]
 [ext_resource type="PackedScene" uid="uid://cjxwg70kbri1d" path="res://Scenes/Character/Lik.tscn" id="3_rpiwl"]
+[ext_resource type="Texture2D" uid="uid://c48fj2bodh4b7" path="res://Assets/Images/UI/pause-cover.png" id="5_r784p"]
 
 [node name="Play" type="Control"]
 texture_filter = 1
@@ -12,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1ueec")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,9 +32,6 @@ position = Vector2(60, 471)
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("2_pwscj")]
 position = Vector2(256, 471)
-
-[node name="Platform3" parent="Platforms" instance=ExtResource("2_pwscj")]
-position = Vector2(62, 398)
 
 [node name="Platform4" parent="Platforms" instance=ExtResource("2_pwscj")]
 position = Vector2(177, 419)
@@ -65,4 +65,22 @@ position = Vector2(269, 218)
 
 [node name="Lik" parent="." instance=ExtResource("3_rpiwl")]
 z_index = 1
-position = Vector2(56, 420)
+position = Vector2(54, 431)
+
+[node name="PausedScene" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PausedScene"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_r784p")

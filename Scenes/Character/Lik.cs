@@ -1,4 +1,5 @@
 using Godot;
+using DoodleJump.Scripts.Core;
 using System;
 
 public partial class Lik : Area2D
@@ -23,6 +24,10 @@ public partial class Lik : Area2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+
+		if(!Doodle.PlayStatusEqual(PlayStatus.PLAYING))
+			return;
+
 		_velocity += new Vector2(0.0f, _gravity * (float)delta);
 		Position += _velocity * (float)delta;
 
