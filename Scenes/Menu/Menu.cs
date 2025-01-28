@@ -9,6 +9,8 @@ public partial class Menu : Control
 	private Sprite2D _lik, _ufo;
 	private Vector2 _likPos, _ufoPos, _ufoOrbit;
 	private TextureButton _scoreBtn, _optionBtn, _playBtn;
+	private AnimationPlayer _transitions;
+	private string _nextScene;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -18,6 +20,7 @@ public partial class Menu : Control
 		_scoreBtn = GetNode<TextureButton>("ScoresBtn");
 		_playBtn = GetNode<TextureButton>("PlayBtn");
 		_optionBtn = GetNode<TextureButton>("OptionsBtn");
+		_transitions = GetNode<AnimationPlayer>("Transitions");
 
 		_likPos = _lik.Position;
 		_ufoPos = _ufo.Position;
@@ -26,6 +29,8 @@ public partial class Menu : Control
 		_playBtn.Pressed += OnPlayPressed;
 		_scoreBtn.Pressed += OnScorePressed;
 		_optionBtn.Pressed += OnOptionPressed;
+		
+
 
 		Doodle.SetInterval(this, MakeLikJump, 1.5f);
 	}
@@ -52,21 +57,35 @@ public partial class Menu : Control
 		.SetEase(Tween.EaseType.InOut);
 	}
 
+	
+
 	private void OnPlayPressed()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/Menu/Play.tscn");
+		_nextScene = "res://Scenes/Menu/Play.tscn";
+		_transitions.Play("fade_out");
 	}
 
 
 	private void OnScorePressed()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/Menu/Score.tscn");
+		_nextScene = "res://Scenes/Menu/Score.tscn";
+		_transitions.Play("fade_out");
 	}
 
 
 	private void OnOptionPressed()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/Menu/Option.tscn");
+		_nextScene = "res://Scenes/Menu/Option.tscn";
+		_transitions.Play("fade_out");
+	}
+	
+	private void _on_transitions_animation_finished(string animName)
+	{
+		if (animName == "fade_out")
+		{
+			GetTree().ChangeSceneToFile(_nextScene);
+			_transitions.Play("fade_in");
+		}
 	}
 
 }

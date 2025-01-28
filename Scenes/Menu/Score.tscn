@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://l86aoxg1rh37"]
+[gd_scene load_steps=13 format=3 uid="uid://l86aoxg1rh37"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/Score.cs" id="1_us463"]
 [ext_resource type="Texture2D" uid="uid://ca3d4g8e8ngjg" path="res://Assets/Images/UI/high-scores-left.png" id="2_0xgwk"]
@@ -7,7 +7,95 @@
 [ext_resource type="Texture2D" uid="uid://s3rheukwn557" path="res://Assets/Images/UI/hs-local.png" id="4_b5fbj"]
 [ext_resource type="Texture2D" uid="uid://birocpred0w3i" path="res://Assets/Images/UI/hs-global.png" id="5_ini6n"]
 [ext_resource type="Texture2D" uid="uid://bh71ykelm1u2s" path="res://Assets/Images/UI/hs-global-on.png" id="6_bfu0e"]
-[ext_resource type="PackedScene" path="res://Scenes/Components/MenuBtn.tscn" id="8_qj3uv"]
+[ext_resource type="PackedScene" uid="uid://dat85vum8hi5x" path="res://Scenes/Components/MenuBtn.tscn" id="8_qj3uv"]
+
+[sub_resource type="Animation" id="Animation_jhgsl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transitions/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transitions/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pbllk"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transitions/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transitions/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_5t8gs"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transitions/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333334, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transitions/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_da5r2"]
+_data = {
+"RESET": SubResource("Animation_jhgsl"),
+"fade_in": SubResource("Animation_pbllk"),
+"fade_out": SubResource("Animation_5t8gs")
+}
 
 [node name="Score" type="Control"]
 texture_filter = 1
@@ -130,3 +218,17 @@ offset_right = -6.0
 offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="Transitions" type="AnimationPlayer" parent="MenuBtn"]
+libraries = {
+"": SubResource("AnimationLibrary_da5r2")
+}
+
+[node name="ColorRect" type="ColorRect" parent="MenuBtn/Transitions"]
+visible = false
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
