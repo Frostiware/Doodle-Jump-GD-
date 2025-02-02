@@ -42,9 +42,11 @@ public partial class Lik : Area2D
 		if(Input.IsActionJustReleased("ArrowLeft"))
 		{
 			_sprite.FlipH = true;
+			_velocity.X = -100.0f;
 		} else if(Input.IsActionJustReleased("ArrowRight"))
 		{
 			_sprite.FlipH = false;
+			_velocity.X = 100.0f;
 		}
 	}
 
@@ -56,6 +58,7 @@ public partial class Lik : Area2D
 			{
 				Position = new Vector2(Position.X, area.Position.Y - 60);
 				_velocity.Y = -300.0f;
+				_velocity.X = 0.0f;
 				_lastSpriteName = "lik-right";
 			}
 		}

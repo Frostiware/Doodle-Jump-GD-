@@ -6,6 +6,7 @@ public partial class Play : Control
 {
 
 	private Control _pausedScene;
+	private Lik _lik;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -13,6 +14,8 @@ public partial class Play : Control
 		Doodle.Status = PlayStatus.PLAYING;
 		_pausedScene = GetNode<Control>("PausedScene");
 		_pausedScene.Visible = false;
+
+		_lik = GetNode<Lik>("Lik");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

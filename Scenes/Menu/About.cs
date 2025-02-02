@@ -1,3 +1,4 @@
+
 using Godot;
 using System;
 namespace DoodleJump.Scripts.Core;
