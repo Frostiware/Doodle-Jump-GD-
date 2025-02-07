@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://s3rheukwn557" path="res://Assets/Images/UI/hs-local.png" id="4_b5fbj"]
 [ext_resource type="Texture2D" uid="uid://birocpred0w3i" path="res://Assets/Images/UI/hs-global.png" id="5_ini6n"]
 [ext_resource type="Texture2D" uid="uid://bh71ykelm1u2s" path="res://Assets/Images/UI/hs-global-on.png" id="6_bfu0e"]
-[ext_resource type="PackedScene" path="res://Scenes/Components/MenuBtn.tscn" id="8_qj3uv"]
+[ext_resource type="PackedScene" uid="uid://dat85vum8hi5x" path="res://Scenes/Components/MenuBtn.tscn" id="8_qj3uv"]
 
 [node name="Score" type="Control"]
 texture_filter = 1
